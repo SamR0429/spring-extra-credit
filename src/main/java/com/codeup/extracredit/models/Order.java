@@ -9,11 +9,14 @@ public class Order {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(columnDefinition = "UNSIGNED")
     private Long id;
 
-    @Column(columnDefinition = "varchar(60)")
+    @Column(columnDefinition = "varchar(80) NOT NULL")
     private String email;
 
+
+    @Column(columnDefinition = "NOT NULL")
     private Double price;
 
     public Order(){
@@ -27,6 +30,11 @@ public class Order {
 
     public Order(Long id, String email, Double price) {
         this.id = id;
+        this.email = email;
+        this.price = price;
+    }
+
+    public Order(String email, Double price) {
         this.email = email;
         this.price = price;
     }

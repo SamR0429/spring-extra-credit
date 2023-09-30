@@ -1,10 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
+<body>
+<div id="wrapper">
+    <main class="container">
+<!--        <p th:text="${blogpost.body}"></p>-->
+<!--        <p th:text="${blogpost.user.email}"></p>-->
+
+        <p th:text="${orders.body}"></p>
+        <p th:text="${orders.email}"></p>
+
+    </main>
+
+</div>
 </body>
-</html>
