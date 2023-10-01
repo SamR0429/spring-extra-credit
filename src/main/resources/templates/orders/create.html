@@ -8,9 +8,16 @@
 <h1>Create Order</h1>
 <form th:action="@{/orders/create}" th:method="POST" th:object="${order}">
 
+<p>hello</p>
+    <label for="email">email</label>
+    <br>
+    <input type="text" th:field="*{email}">
+    <br>
+    <label for="price">price</label>
+    <br>
+    <textarea th:field="*{price}"></textarea>
 
-
-    <button>Create Order</button>
+    <button>Create order</button>
 </form>
 </body>
 </html>

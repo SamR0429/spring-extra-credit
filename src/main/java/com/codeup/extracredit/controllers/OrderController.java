@@ -47,7 +47,7 @@ public class OrderController {
                 order.getPrice()
         );
 
-        orderDao.save(order);
+        orderDao.save(orderToSave);
         //this line might be very long, but basically we need to save the given order and i dont think this was the right way to do it
         return "redirect:/show";
     }
